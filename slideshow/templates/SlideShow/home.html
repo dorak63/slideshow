@@ -1,5 +1,7 @@
 {% load static %}
 {% load slideshow %}
+{% load i18n %}
+{% get_current_language as LANGUAGE_CODE %}
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -11,16 +13,22 @@
     <meta name="description" content="Autoplay usage demo">
     <meta name="author" content="David Deutsch">
     <title>
-      Django | Owl Carousel
+      {% translate 'Django' %} | Owl Carousel
     </title>
-
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
     <!-- Stylesheets -->
     <!-- <link href='https://fonts.googleapis.com/css?family=Lato:300,400,700,400italic,300italic' rel='stylesheet' type='text/css'> -->
     <link rel="stylesheet" href="{% static 'SlideShow/css/docs.theme.min.css' %}">
+    <link rel="stylesheet" href="{% static 'SlideShow/css/rtl.css' %}">
 
     <!-- Owl Stylesheets -->
     <link rel="stylesheet" href="{% static 'SlideShow/owlcarousel/assets/owl.carousel.min.css' %}">
+   {% if LANGUAGE_CODE == 'fa' %}
+   <link rel="stylesheet" href="{% static 'SlideShow/owlcarousel/assets/owl.carousel.min.css' %}">
+   {% endif %}
     <link rel="stylesheet" href="{% static 'SlideShow/owlcarousel/assets/owl.theme.default.min.css' %}">
+    
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
 
@@ -48,9 +56,23 @@
         <div class="large-12 columns">
           <div class="brand left">
             <h3>
-              <a href="/OwlCarousel2/">Django and owl.carousel.js</a> 
+              <a style="line-height: 38px" href="/OwlCarousel2/">{% translate 'django' %} {% translate 'and' %} owl.carousel.js</a> 
             </h3>
           </div>
+          <div class="brand right">
+            <h3>
+              {% if user.is_authenticated %} 
+                 <span style="line-height: 38px">welcome {{user.username}},<a href="{% url 'logout' %}?next={{request.path}}" style="color: red">Lohout</a></span>
+              {% else %}
+                 <a style="line-height: 38px" href="{% url 'social:begin' 'google-oauth2' %}" class="btn btn-danger">Login/Signup with Google</a>
+              {% endif %}
+            </h3>
+          </div>
+          {% comment %} <div class="brand right">
+            <h3>
+              <a href="{% url 'change_lang' %}?lang=en&next=/en/{{request.path|slice: '4:'}}" class="btn btn-danger">{% translate 'EN' %}</a> / <a href="{% url 'change_lang' %}?lang=fa&next=/fa/{{request.path|slice: '4:'}}">{% translate 'FA' %}</a> 
+            </h3>
+          </div> {% endcomment %}
           <a id="toggle-nav" class="right">
             <span></span> <span></span> <span></span> 
           </a> 
@@ -62,7 +84,7 @@
     <section class="title">
       <div class="row">
         <div class="large-12 columns">
-          <h1>Articles</h1>
+          <h1>{% translate 'Articles' %}</h1>
         </div>
       </div>
     </section>
@@ -75,7 +97,7 @@
         <div class="large-12 columns">
           <h5>
             <a id="custom-tweet-button" href="https://twitter.com/MehranTarif" target="_blank"></a> 
-            <a href="https://youtube.com/silicium7">Mehran Tarif</a> 
+            <a href="https://youtube.com/silicium7">{% translate 'Mehran tarif' %}</a> 
           </h5>
         </div>
       </div>

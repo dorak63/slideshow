@@ -1,3 +1,4 @@
+  {% load i18n %}
   <!--  Demos -->
   <section id="demos">
     <div class="row">
@@ -10,8 +11,8 @@
             </div>
           {% endfor %}
         </div>
-        <a class="button secondary play">Play</a> 
-        <a class="button secondary stop">Stop</a> 
+        <a class="button secondary play">{% translate 'Play' %}</a> 
+        <a class="button secondary stop">{% translate 'stop' %}</a> 
         <script>
           $(document).ready(function() {
             var owl = $('.owl-carousel');

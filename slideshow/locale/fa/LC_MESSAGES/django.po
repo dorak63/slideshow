@@ -1,0 +1,83 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-10-21 16:51+0330\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: .\slideshow\apps.py:7 .\slideshow\models.py:30
+msgid "Slide Show"
+msgstr "اسلایدشو"
+
+#: .\slideshow\models.py:8
+msgid "title"
+msgstr "عنوان"
+
+#: .\slideshow\models.py:9
+msgid "image"
+msgstr "عکس"
+
+#: .\slideshow\models.py:10
+msgid "publish"
+msgstr "انتشار"
+
+#: .\slideshow\models.py:13 .\slideshow\models.py:26
+msgid "status"
+msgstr "وضعیت"
+
+#: .\slideshow\models.py:17 .\slideshow\models.py:25
+msgid "Article"
+msgstr "مقالات"
+
+#: .\slideshow\models.py:18 .\slideshow\templates\SlideShow\home.html:77
+msgid "Articles"
+msgstr "مقالات"
+
+#: .\slideshow\models.py:31
+msgid "Slide Shows"
+msgstr "اصلایدشوها"
+
+#: .\slideshow\templates\SlideShow\home.html:16
+msgid "Django"
+msgstr "جنگو"
+
+#: .\slideshow\templates\SlideShow\home.html:58
+msgid "django"
+msgstr "جنگو"
+
+#: .\slideshow\templates\SlideShow\home.html:58
+msgid "and"
+msgstr "جنگو"
+
+#: .\slideshow\templates\SlideShow\home.html:63
+msgid "EN"
+msgstr "انگلیسی"
+
+#: .\slideshow\templates\SlideShow\home.html:63
+msgid "FA"
+msgstr "فارسی"
+
+#: .\slideshow\templates\SlideShow\home.html:90
+msgid "Mehran tarif"
+msgstr "مهران تعریف"
+
+#: .\slideshow\templates\SlideShow\slideshow.html:14
+msgid "Play"
+msgstr "اجرا"
+
+#: .\slideshow\templates\SlideShow\slideshow.html:15
+msgid "stop"
+msgstr "توقف"
